@@ -1,0 +1,9 @@
+<h1>Sign Up</h1>
+
+<%= simple_form_for @user, url: new_user_path do |f| %>
+  <%= f.input :name, label: 'Name' %>
+  <%= f.input :email, label: 'Email' %>
+  <%= f.input :password, label: 'Password' %>
+  <%= f.input :password_confirmation, label: 'Password Confirmation' %>
+  <%= f.button :submit, 'Sign Up' %>
+<% end %>
