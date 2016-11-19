@@ -56,5 +56,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Allow use of ES6 (EMCAScript2015) modules.
 gem 'browserify-rails'
 
+# View helpers
+gem 'simple_form', '~> 3.3'
+
 # External Validations
 gem 'email_validator', '~> 1.6'
