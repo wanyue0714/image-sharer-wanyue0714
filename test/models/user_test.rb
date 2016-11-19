@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
+  include TestParams
+
   test 'persist user email in lowercase' do
     user = User.create! user_params(email: 'HELLO@Wor.lD')
     assert_equal 'hello@wor.ld', user.email
@@ -61,13 +63,5 @@ class UserTest < ActiveSupport::TestCase
     assert_predicate user, :invalid?
     assert_equal({ password_confirmation: ["doesn't match Password"] },
                  user.errors.messages)
-  end
-
-  private
-
-  def user_params(email: 'fake@user.com', name: 'Fake User', password: 'password',
-                  password_confirmation: nil)
-    { email: email, name: name, password: password,
-      password_confirmation: password_confirmation }
   end
 end
