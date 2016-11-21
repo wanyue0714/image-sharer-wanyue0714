@@ -1,6 +1,6 @@
 <h1>Log In</h1>
 
-<%= simple_form_for @session_form, url: new_session_path do |f| %>
+<%= simple_form_for @session_form, url: sessions_path do |f| %>
   <%= f.input :email, label: 'Email' %>
   <%= f.input :password, label: 'Password' %>
   <%= f.button :submit, 'Log In' %>
