@@ -12,6 +12,10 @@ module ActiveSupport
 end
 
 module TestParams
+  def session_form_params(email: 'fake@user.com', password: 'password')
+    { email: email, password: password }
+  end
+
   def user_params(email: 'fake@user.com', name: 'Fake User', password: 'password',
                   password_confirmation: nil)
     { email: email, name: name, password: password,
