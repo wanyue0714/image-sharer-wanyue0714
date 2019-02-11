@@ -28,5 +28,8 @@ module Base
     }
 
     config.active_record.sqlite3.represent_boolean_as_integer = true
+
+    # config/application.rb
+    config.assets.initialize_on_precompile = false
   end
 end
