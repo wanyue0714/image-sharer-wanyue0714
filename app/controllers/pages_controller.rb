@@ -1,6 +1,4 @@
-class PagesController < ActionController::Base
-  protect_from_forgery with: :exception
-  def home
-
-  end
+class PagesController < ActionController
+  # def home
+  # end
 end
